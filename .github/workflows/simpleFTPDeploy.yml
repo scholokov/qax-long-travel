@@ -15,4 +15,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
-        port: 1234 # todo replace with your web hosts ftps port
+        port: 21 # todo replace with your web hosts ftps port
