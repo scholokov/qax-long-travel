@@ -5,22 +5,14 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-- name: FTP Deployer
-  uses: sand4rt/ftp-deployer@v1.3
-  with:
-    sftp: false # optional
-    host: ${{ secrets.FTP_HOST }} # e.g. ftp.host.com or sftp.host.com
-    port: 21 # optional, default is: 21
-    username: ${{ secrets.FTP_USERNAME }} # FTP username
-    password: ${{ secrets.FTP_PASSWORD }} # FTP password
-    remote_folder: ${{ secrets.FTP_REMOTE_FOLDER }} # optional, remote path of your FTP server
-    local_folder: dist # optional, local path, default is: dist
-    cleanup: false # optional, remove existing files inside FTP remote folder
-    include: '' # optional, e.g.
-      # - dist
-    exclude: '' # optional
-      # - node_modules/**
-      # - node_modules/**/.*
-      # - .git/**
-      # - *.env
-    pasive: true # optional
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
+        port: 21 # todo replace with your web hosts ftps port
