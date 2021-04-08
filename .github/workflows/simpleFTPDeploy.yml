@@ -1,4 +1,4 @@
-  on: push
+on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -7,10 +7,12 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
+        port: 1234 # todo replace with your web hosts ftps port
