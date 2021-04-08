@@ -1,0 +1,9 @@
+uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+with:
+  ftp_host: ${{ secrets.FTP_HOST }}
+  ftp_username: ${{ secrets.FTP_USERNAME }}
+  ftp_password: ${{ secrets.FTP_PASSWORD }}
+  local_source_dir: "dist"
+  dist_target_dir: "www/my-app"
+  delete: "true"
+  exclude: "'^logs/' '^README.md'"
