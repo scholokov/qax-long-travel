@@ -1,18 +1,34 @@
-name: CI -> Deploy to My website
+# Workflow name
+name: Deploy site to live
+ 
 on:
+  # Run automatically on push to main branch
   push:
-    branches: [ master, Development ]
+    branches: [ main ]
+    paths:
+    - 'src/**'
+  # Allow manual trigger
+  workflow_dispatch:
+
 jobs:
-  build:
+  web-deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      # Here is the deployment action
-      - name: Upload from public_html via FTP
-        uses: airvzxf/ftp-deployment-action@latest
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          delete: "false"
-          ftp_ssl_allow	: true
+    - name: Get files
+      uses: actions/checkout@v2.3.4
+      
+    - name: FTP Deploy
+      uses: cinderblockgames/ftp-action@v1.2.2
+      with:
+        # required
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # optional
+        port: 22
+        source: src/path
+        destination: target/path
+        skipUnchanged: true
+        skipDirectories: .github|.well-known|configs|private-keys
+        test: true
