@@ -27,8 +27,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         # optional
         port: 22
-        source: src/path
-        destination: target/path
         skipUnchanged: true
         skipDirectories: .github|.well-known|configs|private-keys
         test: true
