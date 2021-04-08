@@ -1,4 +1,4 @@
-name: CI -> Deploy to My website
+name: CI
 on:
   push:
     branches: [ master, Development ]
@@ -14,5 +14,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./public_html"
+          local_dir: ""
           delete: "false"
