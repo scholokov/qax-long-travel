@@ -17,3 +17,4 @@ jobs:
         protocol: ftps
         port: 21 # todo replace with your web hosts ftps port
         server-dir: private_html/
+        local-dir: dist
