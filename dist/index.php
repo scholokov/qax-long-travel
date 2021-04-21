@@ -70,6 +70,7 @@
 					
 					<?php
                     $folders = array_slice(scandir(''), 1);
+					echo $folders;
 				//$folders = array_slice(scandir(''), 2);
                     rsort($folders);
                     foreach($folders as $folder) {
