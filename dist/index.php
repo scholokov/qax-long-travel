@@ -65,6 +65,20 @@
 
 				<article id="our_services">
 					<div class="container clearfix">
+					
+					
+					
+					<?php
+                    $folders = array_slice(scandir('Travels/'), 2);
+                    rsort($folders);
+                    foreach($folders as $folder) {
+                        if ( file_exists(  './Travels/' . $folder . '/article header.html' ))
+                            echo './Travels/' . $folder . '/article header.html' ;
+                    }
+                	?>
+					
+					
+					
 					</div>
                 </article>    
 
