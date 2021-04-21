@@ -70,11 +70,10 @@
 					
 					<?php
                     $folders = array_slice(scandir('././'), 2);
-					echo $folders . '111111111111111111111';
 				//$folders = array_slice(scandir(''), 2);
                     rsort($folders);
                     foreach($folders as $folder) {
-                        echo './Travels/' . $folder . '/article header.html' ;
+                        echo $folder . '<br>' ;
                     }
                 	?>
 					
