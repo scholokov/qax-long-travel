@@ -69,7 +69,7 @@
 					
 					
 					<?php
-                    $folders = array_slice(scandir('././'), 2);
+                    $folders = array_slice(scandir('./Travels'), 2);
 				//$folders = array_slice(scandir(''), 2);
                     rsort($folders);
                     foreach($folders as $folder) {
