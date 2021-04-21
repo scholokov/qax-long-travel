@@ -69,7 +69,8 @@
 					
 					
 					<?php
-                    $folders = array_slice(scandir(''), 2);
+                    $folders = array_slice(scandir(''), 1);
+				//$folders = array_slice(scandir(''), 2);
                     rsort($folders);
                     foreach($folders as $folder) {
                         echo './Travels/' . $folder . '/article header.html' ;
