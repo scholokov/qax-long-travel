@@ -74,7 +74,7 @@
                     rsort($folders);
                     foreach($folders as $folder) {
                         echo $folder . '<br>' ;
-						$json = file_get_contents( $folders . '/article.json');
+						$json = file_get_contents( $folder . '/article.json');
 						$json_data = json_decode($json,true);
 						echo $json_data ;
                     }
