@@ -69,7 +69,7 @@
 					
 					
 					<?php
-                    $folders = array_slice(scandir('css/'), 2);
+                    $folders = array_slice(scandir(''), 2);
                     rsort($folders);
                     foreach($folders as $folder) {
                         echo './Travels/' . $folder . '/article header.html' ;
