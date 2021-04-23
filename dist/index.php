@@ -73,10 +73,10 @@
 				//$folders = array_slice(scandir(''), 2);
                     rsort($folders);
                     foreach($folders as $folder) {
-                        //echo $folder . '<br>' ;
-						$json = file_get_contents( 'Travels/' . $folder . '/article.json' . '<br>');
+                        echo $folder . '<br>' ;
+						$json = file_get_contents( 'Travels/' . $folder . '/article.json');
 						$json_data = json_decode($json,true);
-						echo $json_data ;
+						echo $json_data . '<br>';
                     }
                 	?>
 					
