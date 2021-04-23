@@ -83,8 +83,8 @@
 						echo $json_data['date']  . '<br>' ;
 						echo $json_data['name']  . '<br>' ;
 						
-						foreach($results['country'] as $result) {
-							echo $result, '<br>';
+						foreach($json_data['country'] as $result) {
+							echo $result . '<br>';
 						}
 						
 
