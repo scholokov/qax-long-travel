@@ -82,9 +82,11 @@
 						echo $folder . '<br>' ;
 						echo $json_data['date']  . '<br>' ;
 						echo $json_data['name']  . '<br>' ;
-						echo $json_data['country']  . '<br>' ;
 						
-				
+						foreach($results['country'] as $result) {
+							echo $result, '<br>';
+						}
+						
 
 						
 						
