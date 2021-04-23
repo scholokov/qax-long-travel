@@ -85,7 +85,6 @@
 						
 						echo  '<tr>' ;
 						
-
 							//  ----------   line data ------------
 							
 							echo '<th>';								  // country
@@ -94,9 +93,7 @@
 							}
 							echo '</th>';
 
-							echo '<a href="blog.php?id=' . $folder . '">' ;
-								echo '<th>' . $json_data['name'] . '</th>' ;  // name
-							echo '</a>';
+							echo '<th>' . '<a href="blog.php?id=' . $folder . '">' . $json_data['name'] . '</a>' . '</th>' ;  // name
 							
 							echo '<th>' . $json_data['distance'] . '</th>' ;  // distance
 							
@@ -106,7 +103,6 @@
 							
 							echo '<th>' . $folder . '</th>' ; // folder
 
-							
 							//  ----------   line data END ------------
 							
 						echo  '</tr>' ;
