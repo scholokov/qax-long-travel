@@ -66,11 +66,16 @@
 				<article id="our_services">
 					<div class="container clearfix">
 						<table id = "table_coutries">
-					
+						<tr>
+							<th>Name</th>
+							<th>distance</th>
+							<th>date</th>
+							<th>duration</th>
+							<th>folder</th>
+						</tr>
 					
 					<?php
                     $folders = array_slice(scandir('./Travels'), 2);
-				//$folders = array_slice(scandir(''), 2);
                     rsort($folders);
                     foreach($folders as $folder) {
                         
