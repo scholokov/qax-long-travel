@@ -67,11 +67,12 @@
 					<div class="container clearfix">
 						<table id = "table_coutries">
 						<tr>
+							<th>Country</th>
 							<th>Name</th>
-							<th>distance</th>
-							<th>date</th>
-							<th>duration</th>
-							<th>folder</th>
+							<th>Distance</th>
+							<th>Date</th>
+							<th>Duration</th>
+							<th>Folder</th> <!-- just for testing -->
 						</tr>
 					
 					<?php
