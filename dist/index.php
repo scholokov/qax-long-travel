@@ -85,7 +85,7 @@
 						$json_data = json_decode($json,true);
 
 						//  ----------   line data ------------
-						echo '<a href="https://www.w3schools.com">' ;
+						echo '<a href="blog.php?id=' . $folder . '">' ;
 						echo '<th>';								  // country
 						foreach($json_data['country'] as $result) {
 							echo $result . ' ';
