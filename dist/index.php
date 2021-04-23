@@ -77,6 +77,26 @@
 						$json = file_get_contents( 'Travels/' . $folder . '/article.json');
 						$json_data = json_decode($json,true);
 						echo $json_data . '<br>';
+						
+						
+						
+						echo $json_data['date'];
+						echo $json_data['name'];
+						echo $json_data['country'];
+						
+				
+
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
                     }
                 	?>
 					
