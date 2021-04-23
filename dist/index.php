@@ -85,12 +85,15 @@
 						$json_data = json_decode($json,true);
 
 						//  ----------   line data ------------
-						
+						echo '<a href="https://www.w3schools.com">' ;
 						echo '<th>';								  // country
 						foreach($json_data['country'] as $result) {
 							echo $result . ' ';
 						}
 						echo '</th>';
+
+						
+
 
 						echo '<th>' . $json_data['name'] . '</th>' ;  // name
 						
@@ -104,7 +107,7 @@
 
 						
 						//  ----------   line data END ------------
-						
+						echo '</a>';
 						echo  '</tr>' ;
                     }
                 	?>
