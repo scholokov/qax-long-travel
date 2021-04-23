@@ -65,7 +65,7 @@
 
 				<article id="our_services">
 					<div class="container clearfix">
-					
+						<table id = "table_coutries">
 					
 					
 					<?php
@@ -74,34 +74,27 @@
                     rsort($folders);
                     foreach($folders as $folder) {
                         
+						echo  '<tr>' ;
 						$json = file_get_contents( 'Travels/' . $folder . '/article.json');
 						$json_data = json_decode($json,true);
 						
+						echo '<th>' . $json_data['date'] . '</th>' ;  // data
+						echo '<th>' . $json_data['name'] . '</th>' ;  // name
 						
-						
-						echo $folder . '<br>' ;
-						echo $json_data['date']  . '<br>' ;
-						echo $json_data['name']  . '<br>' ;
-						
+						echo '<th>';								  // country
 						foreach($json_data['country'] as $result) {
-							echo $result . '<br>';
+							echo $result . ' ';
 						}
-						
-
-						
+						echo '</th>';
 						
 						
 						
-						
-						
-						
-						
-						
-						
-						
+						echo  '</tr>' ;
                     }
                 	?>
 					
+					
+						</table>
 					
 					
 					</div>
