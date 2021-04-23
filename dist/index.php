@@ -87,27 +87,28 @@
 						
 
 							//  ----------   line data ------------
+							
+							echo '<th>';								  // country
+							foreach($json_data['country'] as $result) {
+								echo $result . ' ';
+							}
+							echo '</th>';
+
 							echo '<a href="blog.php?id=' . $folder . '">' ;
-								echo '<th>';								  // country
-								foreach($json_data['country'] as $result) {
-									echo $result . ' ';
-								}
-								echo '</th>';
-
-
 								echo '<th>' . $json_data['name'] . '</th>' ;  // name
-								
-								echo '<th>' . $json_data['distance'] . '</th>' ;  // distance
-								
-								echo '<th>' . $json_data['date'] . '</th>' ;  // date
-								
-								echo '<th>' . $json_data['duration'] . '</th>' ;  // duration
-								
-								echo '<th>' . $folder . '</th>' ; // folder
-
-								
-								//  ----------   line data END ------------
 							echo '</a>';
+							
+							echo '<th>' . $json_data['distance'] . '</th>' ;  // distance
+							
+							echo '<th>' . $json_data['date'] . '</th>' ;  // date
+							
+							echo '<th>' . $json_data['duration'] . '</th>' ;  // duration
+							
+							echo '<th>' . $folder . '</th>' ; // folder
+
+							
+							//  ----------   line data END ------------
+							
 						echo  '</tr>' ;
                     }
                 	?>
