@@ -77,17 +77,25 @@
 						echo  '<tr>' ;
 						$json = file_get_contents( 'Travels/' . $folder . '/article.json');
 						$json_data = json_decode($json,true);
-						
-						echo '<th>' . $json_data['date'] . '</th>' ;  // data
-						echo '<th>' . $json_data['name'] . '</th>' ;  // name
+
+						//  ----------   line data ------------
 						
 						echo '<th>';								  // country
 						foreach($json_data['country'] as $result) {
 							echo $result . ' ';
 						}
 						echo '</th>';
+
+						echo '<th>' . $json_data['name'] . '</th>' ;  // name
 						
+						echo '<th>' . $json_data['distance'] . '</th>' ;  // distance
 						
+						echo '<th>' . $json_data['date'] . '</th>' ;  // date
+						
+						echo '<th>' . $json_data['duration'] . '</th>' ;  // duration
+
+						
+						//  ----------   line data END ------------
 						
 						echo  '</tr>' ;
                     }
