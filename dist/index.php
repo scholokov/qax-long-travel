@@ -93,6 +93,8 @@
 						echo '<th>' . $json_data['date'] . '</th>' ;  // date
 						
 						echo '<th>' . $json_data['duration'] . '</th>' ;  // duration
+						
+						echo '<th>' . $folder . '</th>' ; // folder
 
 						
 						//  ----------   line data END ------------
