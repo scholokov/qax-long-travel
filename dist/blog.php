@@ -68,11 +68,10 @@
                     
                     $json = file_get_contents( 'Travels/' . $folder_name_GET . '/article.json');
                     $json_data = json_decode($json,true); 
-                    echo '<th>' . $json_data['distance'] . '</th>' ;  // distance
-							
-                    echo '<th>' . $json_data['date'] . '</th>' ;  // date
                     
-                    echo '<th>' . $json_data['duration'] . '</th>' ;  // duration                 
+                    echo '<br>' . $json_data['distance']  ;  // distance
+                    echo '<br>' . $json_data['date']  ;  // date
+                    echo '<br>' . $json_data['duration']  ;  // duration                 
                     
                     
                     
