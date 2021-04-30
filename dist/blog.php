@@ -63,7 +63,21 @@
                 <div class="content-wrap">
 
                 <?
-                    $cource_tab_GET = $_GET["cource"] ; 
+                    $folder_name_GET = $_GET["id"] ; 
+                    echo $cource_tab_GET ;
+                    
+                    $json = file_get_contents( 'Travels/' . $folder_name_GET . '/article.json');
+                    $json_data = json_decode($json,true); 
+                    echo '<th>' . $json_data['distance'] . '</th>' ;  // distance
+							
+                    echo '<th>' . $json_data['date'] . '</th>' ;  // date
+                    
+                    echo '<th>' . $json_data['duration'] . '</th>' ;  // duration                 
+                    
+                    
+                    
+                    
+                    
                 ?>
 
 
