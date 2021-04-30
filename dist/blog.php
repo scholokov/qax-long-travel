@@ -72,10 +72,13 @@
                     echo '<br>' . $json_data['distance']  ;  // distance
                     echo '<br>' . $json_data['date']  ;  // date
                     echo '<br>' . $json_data['duration']  ;  // duration                 
+                    echo '<br>' . $json_data['map']  ;  // distance
+                    echo '<br>' . $json_data['name']  ;  // date                 
                     
-                    
-                    
-                    
+                    echo '<br>';								  // country
+                    foreach($json_data['country'] as $result) {
+                        echo $result . ' ';
+                    }                   
                     
                 ?>
 
