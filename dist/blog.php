@@ -70,7 +70,7 @@
                     $json_data = json_decode($json,true); 
                     
                     echo '<br>' . $json_data['distance']  ;  // distance
-                    echo '<br>' . $json_data['date']  ;  // date
+                    
                     echo '<br>' . $json_data['duration']  ;  // duration                 
                     echo '<br>' . $json_data['map']  ;  // distance
                     echo '<br>' . $json_data['name']  ;  // date                 
@@ -79,6 +79,30 @@
                     foreach($json_data['country'] as $result) {
                         echo $result . ' ';
                     }                   
+                    
+                    echo '<br>' . $json_data['date']  ;  // date
+                    if ( $json_data["dateend"] ){
+                        $dateend = ' - ' . $json_data["dateend"] ;
+                    }
+                    else{
+                        $dateend = '';
+                    }
+                    echo '<br>' . $json_data['dateend']  ;  // date end
+                    
+                    
+                    echo '<br><br><br><br>' ;
+                    foreach($json_data["articles"] as $result) {
+                        echo '<br>' . $json_data['date']  ;  // date end
+                        echo '<br>' . $json_data['name']  ;  // date end
+                        echo '<br>' . $json_data['city']  ;  // date end
+                        echo '<br>' . $json_data['foto']  ;  // date end
+
+                        echo '<br>';								  // country
+                        foreach($json_data['country'] as $result) {
+                            echo $result . ' ';
+                        }               
+                        
+                    }
                     
                 ?>
 
