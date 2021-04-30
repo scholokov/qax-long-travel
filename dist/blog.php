@@ -62,6 +62,9 @@
             <section id="content">
                 <div class="content-wrap">
 
+                <?
+                    $cource_tab_GET = $_GET["cource"] ; 
+                ?>
 
 
 
