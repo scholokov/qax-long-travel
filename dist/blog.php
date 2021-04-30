@@ -92,10 +92,9 @@
                     
                     echo '<br><br><br>Article<br>' ;
                     foreach($json_data["articles"] as $result) {
-                        echo '<br>date = ' . $json_data['date']  ;  // date end
-                        echo '<br>name = ' . $json_data['name']  ;  // date end
-                        echo '<br>name = ' . $json_data['name']  ;  // date end
-                        echo '<br>foto' . $json_data['foto']  ;  // date end
+                        echo '<br>date = ' . $json_data['date']  ; 
+                        echo '<br>name = ' . $json_data['name']  ;  
+                        echo '<br>foto = ' . $json_data['foto']  ; 
 
                         echo '<br>country = ';								  // country
                         foreach($json_data['country'] as $result) {
