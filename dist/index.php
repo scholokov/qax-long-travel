@@ -40,13 +40,11 @@
 		<header >
             <div id="header-block">
                 <div id="main-logo">
-                   <img id="img-earth"src="images/earth.svg">
+                   <img id="img-earth" src="images/earth.svg">
                     <p>Long-Travel</p> 
                 </div>
                 
             </div>
-
-		<header id="header-block">
 			
 		</header><!-- #header end -->
 
@@ -65,6 +63,130 @@
 
 				<article id="our_services">
 					<div class="container clearfix">
+					<table class="table-bordered">
+						<thead>
+							<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							<th scope="row">Ukraine </th>
+							<td class="table-city">Odesa</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<tr>
+							<th scope="row">Germany</th>
+							<td class="table-city">Lviv - Warsaw - Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<tr>
+							<th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<th scope="row">Germany</th>
+							<td class="table-city" >Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+
+							</tr><th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+							<th scope="row">Germany</th>
+							<td class="table-city">Berlin</td>
+							<td>350 km</td>
+							<td></td>
+							<td>07.01.2020</td>
+							<td></td>
+							<td>3 days</td>
+							<td></td>
+							</tr>
+
+						</tbody>
+						</table>
 					</div>
                 </article>    
 
