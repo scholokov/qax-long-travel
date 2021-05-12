@@ -3,43 +3,44 @@
 
 <head>
 
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
 
-	<!-- Stylesheets
+    <!-- Stylesheets
 	============================================= -->
 
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="css/common.css" type="text/css" />
 
     <link rel="stylesheet" href="css/header.css" type="text/css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> -->
 
 
-	<!-- Document Title
+    <!-- Document Title
 	============================================= -->
-	<title>Travel Blog</title>
-	<link>
+    <title>Travel Blog</title>
+    <link>
 
-		
-	</script>
+
+    </script>
 
 </head>
 
 <body class="stretched">
 
-	<!-- Document Wrapper
+    <!-- Document Wrapper
 	============================================= -->
-	<div id="wrapper" class="clearfix">
+    <div id="wrapper" class="clearfix">
 
-		<!-- Header
+        <!-- Header
 		============================================= -->
 
-		<header >
+        <header>
             <div id="header-block">
                 <div id="main-logo">
+<<<<<<< HEAD
                    <img id="img-earth" src="images/earth.svg">
                     <p>Long-Travel</p> 
                 </div>
@@ -47,20 +48,24 @@
             </div>
 			
 		</header><!-- #header end -->
+=======
+                    <img id="img-earth" src="images/earth.svg">
+                    <p>Long-Travel</p>
+                </div>
 
-		<!-- Page Title
+            </div>
+>>>>>>> f0d2c179a8e9550e8fddc105dd89a5625a81379d
+
+            <header id="header-block">
+
+            </header><!-- #header end -->
+
+            <!-- Page Title
 		============================================= -->
-		<section>
-			<img src="images/countries.svg">
+            <section>
+                <img src="images/countries.svg">
 
-		</section>
-
-		<!-- Content
-		============================================= -->
-		<section id="content">
-			<div class="content-wrap">
-
-
+<<<<<<< HEAD
 				<article id="our_services">
 					<div class="container clearfix">
 					<table class="table-bordered">
@@ -189,29 +194,86 @@
 						</table>
 					</div>
                 </article>    
+=======
+            </section>
+>>>>>>> f0d2c179a8e9550e8fddc105dd89a5625a81379d
 
-				<!-- Copyrights
+            <!-- Content
+		============================================= -->
+            <section id="content">
+                <div class="content-wrap">
+
+
+                    <article id="our_services">
+                        <div class="container clearfix">
+                            <table id="table_coutries">
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Name</th>
+                                    <th>Distance</th>
+                                    <th>Date</th>
+                                    <th>Duration</th>
+                                    <th>Folder</th> <!-- just for testing -->
+                                </tr>
+
+                                <?php
+                    $folders = array_slice(scandir('./Travels'), 2);
+                    rsort($folders);
+                    foreach($folders as $folder) {
+                        
+						$json = file_get_contents( 'Travels/' . $folder . '/article.json');
+						$json_data = json_decode($json,true);
+						
+						echo  '<tr>' ;
+						
+							//  ----------   line data ------------
+							
+							echo '<th>';								  // country
+							foreach($json_data['country'] as $result) {
+								echo $result . ' ';
+							}
+							echo '</th>';
+
+							echo '<th>' . '<a href="blog.php?id=' . $folder . '">' . $json_data['name'] . '</a>' . '</th>' ;  // name
+							
+							echo '<th>' . $json_data['distance'] . '</th>' ;  // distance
+							
+							echo '<th>' . $json_data['date'] . '</th>' ;  // date
+							
+							echo '<th>' . $json_data['duration'] . '</th>' ;  // duration
+							
+							echo '<th>' . $folder . '</th>' ; // folder
+
+							//  ----------   line data END ------------
+							
+						echo  '</tr>' ;
+                    }
+                	?>
+
+
+                            </table>
+
+
+                        </div>
+                    </article>
+
+                    <!-- Copyrights
 			============================================= -->
-				<footer id="footer">
-					
-				</footer><!-- #footer end -->
+                    <footer id="footer">
+
+                    </footer><!-- #footer end -->
 
 
 
-			</div>
-		</section><!-- #content end -->
+                </div>
+            </section><!-- #content end -->
 
+    </div><!-- #wrapper end -->
 
-
-
-	</div><!-- #wrapper end -->
-
-	
-
-	<!-- JavaScripts
+    <!-- JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.min.js"></script>
 
 
 </body>
