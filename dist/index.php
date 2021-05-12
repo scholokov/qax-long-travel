@@ -40,21 +40,11 @@
         <header>
             <div id="header-block">
                 <div id="main-logo">
-<<<<<<< HEAD
-                   <img id="img-earth" src="images/earth.svg">
-                    <p>Long-Travel</p> 
-                </div>
-                
-            </div>
-			
-		</header><!-- #header end -->
-=======
                     <img id="img-earth" src="images/earth.svg">
                     <p>Long-Travel</p>
                 </div>
 
             </div>
->>>>>>> f0d2c179a8e9550e8fddc105dd89a5625a81379d
 
             <header id="header-block">
 
@@ -65,138 +55,7 @@
             <section>
                 <img src="images/countries.svg">
 
-<<<<<<< HEAD
-				<article id="our_services">
-					<div class="container clearfix">
-					<table class="table-bordered">
-						<thead>
-							<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-							<th scope="row">Ukraine </th>
-							<td class="table-city">Odesa</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<tr>
-							<th scope="row">Germany</th>
-							<td class="table-city">Lviv - Warsaw - Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<tr>
-							<th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<th scope="row">Germany</th>
-							<td class="table-city" >Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-
-							</tr><th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-							<th scope="row">Germany</th>
-							<td class="table-city">Berlin</td>
-							<td>350 km</td>
-							<td></td>
-							<td>07.01.2020</td>
-							<td></td>
-							<td>3 days</td>
-							<td></td>
-							</tr>
-
-						</tbody>
-						</table>
-					</div>
-                </article>    
-=======
             </section>
->>>>>>> f0d2c179a8e9550e8fddc105dd89a5625a81379d
 
             <!-- Content
 		============================================= -->
