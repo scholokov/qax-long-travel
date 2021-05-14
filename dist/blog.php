@@ -81,7 +81,7 @@
                         <div id="top_text">
                         <h3><?echo $json_data['name']?>;</h3>
                         <div><?foreach($json_data['country'] as $result) { echo $result . ' '; }?> </div>
-                        <div><?echo $json_data['date'] . $json_data['dateend']?></div>
+                        <div><?echo $json_data['date'] . $dateend?></div>
                         </div>
                     </div>
                     <div class="container-xxl">
