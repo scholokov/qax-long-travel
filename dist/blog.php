@@ -73,7 +73,7 @@
                     <div class="container">
                         <div id="top_text">
                         <h3><?echo $json_data['name']?>;</h3>
-                        <div>Ukraine Romania Serbia Makedonia Albania Montenegro Bosnia </div>
+                        <div><?foreach($json_data['country'] as $result) { echo $result . ' '; }?> </div>
                         <div>20.07.2019 - 11.08.2019</div>
                         </div>
                     </div>
