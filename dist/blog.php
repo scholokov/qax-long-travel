@@ -63,10 +63,16 @@
             <section id="content">
                 <div class="content-wrap">
 
+                <?
+                    $folder_name_GET = $_GET["id"] ; 
+                    $json = file_get_contents( 'Travels/' . $folder_name_GET . '/article.json');
+                    $json_data = json_decode($json,true); 
+                ?>
+
 
                     <div class="container">
                         <div id="top_text">
-                        <h3>Balcans</h3>
+                        <h3><?echo $json_data['name']?>;</h3>
                         <div>Ukraine Romania Serbia Makedonia Albania Montenegro Bosnia </div>
                         <div>20.07.2019 - 11.08.2019</div>
                         </div>
