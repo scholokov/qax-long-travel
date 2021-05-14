@@ -2,6 +2,8 @@
 
 body{
     font-family: 'Montserrat';
+    background-color: #22272E;
+    color: #C3D9E5;
 }
 p{
     font-size: 18px;
@@ -10,4 +12,8 @@ p{
     line-height: 22px;
     letter-spacing: 0em;
 
+}
+
+.container{
+    max-width: 900px;
 }
