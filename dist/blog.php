@@ -67,6 +67,13 @@
                     $folder_name_GET = $_GET["id"] ; 
                     $json = file_get_contents( 'Travels/' . $folder_name_GET . '/article.json');
                     $json_data = json_decode($json,true); 
+                    
+                    if ( $json_data["dateend"] ){
+                        $dateend = ' - ' . $json_data["dateend"] ;
+                    }
+                    else{
+                        $dateend = '';
+                    }
                 ?>
 
 
@@ -74,7 +81,7 @@
                         <div id="top_text">
                         <h3><?echo $json_data['name']?>;</h3>
                         <div><?foreach($json_data['country'] as $result) { echo $result . ' '; }?> </div>
-                        <div>20.07.2019 - 11.08.2019</div>
+                        <div><?echo $json_data['date'] . $json_data['dateend']?></div>
                         </div>
                     </div>
                     <div class="container-xxl">
