@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/common.css" type="text/css" />
     <link rel="stylesheet" href="css/header.css" type="text/css" />
     <link rel="stylesheet" href="css/blog.css" type="text/css" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> -->
@@ -22,7 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- Fotorama from CDNJS, 19 KB -->
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 
     <!-- Document Title
@@ -65,7 +65,7 @@
             <section id="content">
                 <div class="content-wrap">
 
-                <?
+                    <?
                     $folder_name_GET = $_GET["id"] ; 
                     $json = file_get_contents( 'Travels/' . $folder_name_GET . '/article.json');
                     $json_data = json_decode($json,true); 
@@ -79,31 +79,85 @@
                 ?>
 
 
-                <div class="container">
-                    <div id="top_text">
-                    <h3><?echo $json_data['name']?>;</h3>
-                    <div><?foreach($json_data['country'] as $result) { echo $result . ' '; }?> </div>
-                    <div><?echo $json_data['date'] . $dateend?></div>
+                    <div class="container">
+                        <div id="top_text">
+                            <h3><?echo $json_data['name']?></h3>
+                            <div>
+                                <?foreach($json_data['country'] as $result) { echo $result . ' '; }?>
+                            </div>
+                            <div>
+                                <?echo $json_data['date'] . $dateend?>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="container-xxl">
-                <!--<img src="images/map.svg" alt="map">--> 
-                <iframe src="<?echo '<br>map = ' . $json_data['map']?>" 
-                max-width="1440px" width="100%" max-height="500px" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="container">
-                    <div id="bottom_text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ultricies ullamcorper felis, viverra in maecenas integer. 
-                        Amet habitant lectus pharetra sem ac quisque nunc ut etiam. Nulla nibh consectetur eget et, laoreet mattis et. 
-                        Pellentesque sit cras eget vitae cras ut. Purus quis netus vulputate amet lectus bibendum. 
-                        Vel, congue aliquet ac amet mauris dignissim in. Orci lectus facilisis praesent diam odio libero eu. 
-                        Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut ornare viverra lorem.
+                    <div class="container-xxl">
+                        <!--<img src="images/map.svg" alt="map">-->
+                        <iframe src="<?echo '<br>map = ' . $json_data['map']?>" max-width="1440px" width="100%"
+                            max-height="500px" height="500px" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
                     </div>
-                </div>
+                    <div class="container">
+                        <div id="bottom_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ultricies ullamcorper felis,
+                            viverra in maecenas integer.
+                            Amet habitant lectus pharetra sem ac quisque nunc ut etiam. Nulla nibh consectetur eget et,
+                            laoreet mattis et.
+                            Pellentesque sit cras eget vitae cras ut. Purus quis netus vulputate amet lectus bibendum.
+                            Vel, congue aliquet ac amet mauris dignissim in. Orci lectus facilisis praesent diam odio
+                            libero eu.
+                            Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut
+                            ornare viverra lorem.
+                        </div>
+                    </div>
 
 
-                <?
-                    // other articles
+                    <?    
+                        // other articles
+                        // just legacy code :))))
+                        foreach($json_data["articles"] as $result) {
+                            echo '<div class="container">';
+                                echo '<div id="top_text">';
+                                    echo '<h3>' . $json_data['name'] . '</h3>';
+                                        echo '<div>';
+                                            foreach($json_data['country'] as $result) { echo $result . ' ';}
+                                        echo '</div>';
+                                    echo '<div>';
+                                        echo $json_data['date'] . $dateend;
+                                    echo '</div>';
+                                echo '</div>';
+                            echo '</div>';
+                    
+                    
+                            echo '<div class="container-xxl">';
+                            // <!--<img src="images/map.svg" alt="map">-->
+                                echo '<iframe src="<br>map = ' . $json_data['map'] . '" max-width="1440px" width="100%"
+                            max-height="500px" height="500px" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>';
+                            echo '</div>';
+                        
+                            echo '<div class="container">';
+                                echo '<div id="bottom_text">';
+                                    echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ultricies ullamcorper felis,
+                            viverra in maecenas integer.
+                            Amet habitant lectus pharetra sem ac quisque nunc ut etiam. Nulla nibh consectetur eget et,
+                            laoreet mattis et.
+                            Pellentesque sit cras eget vitae cras ut. Purus quis netus vulputate amet lectus bibendum.
+                            Vel, congue aliquet ac amet mauris dignissim in. Orci lectus facilisis praesent diam odio
+                            libero eu.
+                            Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut
+                            ornare viverra lorem.';
+                                echo '</div>';
+                            echo '</div>';
+                            
+                            
+                        }
+
+
+
+
+
+
+                    <?    
                     // just legacy code :))))
                     foreach($json_data["articles"] as $result) {
                         echo '<article class=article-second-body>';
