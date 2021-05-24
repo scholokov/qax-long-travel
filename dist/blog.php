@@ -67,6 +67,7 @@
 
                     <?
                     $folder_name_GET = $_GET["id"] ; 
+                    $full_folder_name = 'Travels/' . $folder_name_GET;
                     $json = file_get_contents( 'Travels/' . $folder_name_GET . '/article.json');
                     $json_data = json_decode($json,true); 
                     
@@ -146,6 +147,19 @@
                             Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut ornare viverra lorem.';
                                 echo '</div>';
                             echo '</div>';
+                            
+                            
+                            echo    '<div class=photo-galery>' ;
+                            if ( $result["foto"] ){
+                                echo        '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820" data-navposition="top">';
+                                
+                                            $files = scandir( $full_folder_name . '/images/' . $result["foto"] . '/' );
+                                            foreach($files as $file) {
+                                                if ( $file != '.' AND $file != '..' )
+                                                    echo '<img src="' . $full_folder_name . '/images/' . $result["foto"] . '/' . $file . '">' ;
+                                            }
+                                echo        '</div>';
+                            }
                             
                         };
                     ?>
