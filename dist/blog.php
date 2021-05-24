@@ -119,13 +119,13 @@
                         foreach($json_data["articles"] as $result) {
                             echo '<div class="container">';
                                 echo '<div id="top_text">';
-                                    echo '<h3>' . $json_data['name'] . '</h3>';
+                                    echo '<h3>' . $result['name'] . '</h3>';
                                         echo '<div>';
-                                            foreach($json_data['country'] as $result) { 
+                                            foreach($result['country'] as $result) { 
                                                 echo $result . ' ';}
                                         echo '</div>';
                                     echo '<div>';
-                                        echo $json_data['date'] . $dateend;
+                                        echo $result['date'] . $result['dateend'];
                                     echo '</div>';
                                 echo '</div>';
                             echo '</div>';
@@ -133,7 +133,7 @@
                     
                             echo '<div class="container-xxl">';
                             // <!--<img src="images/map.svg" alt="map">-->
-                                echo '<iframe src="<br>map = ' . $json_data['map'] . '" max-width="1440px" width="100%"
+                                echo '<iframe src="<br>map = ' . $result['map'] . '" max-width="1440px" width="100%"
                             max-height="500px" height="500px" style="border:0;" allowfullscreen=""
                             loading="lazy"></iframe>';
                             echo '</div>';
@@ -147,9 +147,7 @@
                                 echo '</div>';
                             echo '</div>';
                             
-                            
                         };
-                        
                     ?>
 
 
