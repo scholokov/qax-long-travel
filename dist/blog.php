@@ -73,29 +73,52 @@
                 ?>
 
 
-                    <div class="container">
-                        <div id="top_text">
-                        <h3><?echo $json_data['name']?>;</h3>
-                        <div><?foreach($json_data['country'] as $result) { echo $result . ' '; }?> </div>
-                        <div><?echo $json_data['date'] . $dateend?></div>
-                        </div>
+                <div class="container">
+                    <div id="top_text">
+                    <h3><?echo $json_data['name']?>;</h3>
+                    <div><?foreach($json_data['country'] as $result) { echo $result . ' '; }?> </div>
+                    <div><?echo $json_data['date'] . $dateend?></div>
                     </div>
-                    <div class="container-xxl">
-                    <!--<img src="images/map.svg" alt="map">--> 
-                    <iframe src="<?echo '<br>map = ' . $json_data['map']?>" 
-                    max-width="1440px" width="100%" max-height="500px" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="container-xxl">
+                <!--<img src="images/map.svg" alt="map">--> 
+                <iframe src="<?echo '<br>map = ' . $json_data['map']?>" 
+                max-width="1440px" width="100%" max-height="500px" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="container">
+                    <div id="bottom_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ultricies ullamcorper felis, viverra in maecenas integer. 
+                        Amet habitant lectus pharetra sem ac quisque nunc ut etiam. Nulla nibh consectetur eget et, laoreet mattis et. 
+                        Pellentesque sit cras eget vitae cras ut. Purus quis netus vulputate amet lectus bibendum. 
+                        Vel, congue aliquet ac amet mauris dignissim in. Orci lectus facilisis praesent diam odio libero eu. 
+                        Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut ornare viverra lorem.
                     </div>
-                    <div class="container">
-                        <div id="bottom_text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ultricies ullamcorper felis, viverra in maecenas integer. 
-                            Amet habitant lectus pharetra sem ac quisque nunc ut etiam. Nulla nibh consectetur eget et, laoreet mattis et. 
-                            Pellentesque sit cras eget vitae cras ut. Purus quis netus vulputate amet lectus bibendum. 
-                            Vel, congue aliquet ac amet mauris dignissim in. Orci lectus facilisis praesent diam odio libero eu. 
-                            Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut ornare viverra lorem.
-                        </div>
-                    </div>
+                </div>
 
 
+                <?
+                    // other articles
+                    foreach($json_data["articles"] as $result) {
+                        echo '<article class=article-second-body>';
+                        echo    '<article class=article-second-header>';
+                        echo            '<h1>' . $result["name"] . '</h1>'    ;
+                        echo            '<h2>';
+                                            foreach($result["country"] as $result2) {
+                                                echo $result2 . " ";
+                                            };
+                        echo            '</h2>';
+                                        if ( $result["dateend"] ){
+                                            $dateend = ' - ' . $result["dateend"] ;
+                                        }
+                                        else{
+                                            $dateend = '';
+                                        }
+                        echo            '<h3>' . $result["date"] . $dateend . '</h3>' ;
+                        
+                        if ( $result["link_booking"] ) {
+                            echo            '<h3>' . '<a href="' .  $result["link_booking"] . '">Booking link</a>' . '</h3>' ;
+                        }
+                    ?>
 
 
 
