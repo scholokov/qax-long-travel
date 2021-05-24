@@ -154,7 +154,7 @@
                                 echo    '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820" data-navposition="top">';
                                 
                                     $files = scandir( $full_folder_name . '/images/' . $result["foto"] . '/' );
-                                echo $files;
+                                echo $full_folder_name . '/images/' . $result["foto"] . '/' ;
                                     foreach($files as $file) {
                                         if ( $file != '.' AND $file != '..' )
                                             echo '<img src="' . $full_folder_name . '/images/' . $result["foto"] . '/' . $file . '">' ;
