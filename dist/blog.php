@@ -117,16 +117,16 @@
                     <?    
                         // other articles
                         // just legacy code :))))
-                        foreach($json_data["articles"] as $result) {
+                        foreach($json_data["articles"] as $json_key) {
                             echo '<div class="container">';
                                 echo '<div id="top_text">';
-                                    echo '<h3>' . $result['name'] . '</h3>';
+                                    echo '<h3>' . $json_key['name'] . '</h3>';
                                         echo '<div>';
-                                            foreach($result['country'] as $result) { 
-                                                echo $result . ' ';}
+                                            foreach($json_key['country'] as $country) { 
+                                                echo $country . ' ';}
                                         echo '</div>';
                                     echo '<div>';
-                                        echo $result['date'] . $result['dateend'];
+                                        echo $json_key['date'] . $json_key['dateend'];
                                     echo '</div>';
                                 echo '</div>';
                             echo '</div>';
@@ -134,7 +134,7 @@
                     
                             echo '<div class="container-xxl">';
                             // <!--<img src="images/map.svg" alt="map">-->
-                                echo '<iframe src="<br>map = ' . $result['map'] . '" max-width="1440px" width="100%"
+                                echo '<iframe src="<br>map = ' . $json_key['map'] . '" max-width="1440px" width="100%"
                             max-height="500px" height="500px" style="border:0;" allowfullscreen=""
                             loading="lazy"></iframe>';
                             echo '</div>';
@@ -149,15 +149,15 @@
                             echo '</div>';
                             
                             
-                            if ( $result["foto"] ){
+                            if ( $json_key["foto"] ){
                                 echo    '<div class=photo-galery>' ;
                                 echo    '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820" data-navposition="top">';
                                 
-                                    $files = scandir( $full_folder_name . '/images/' . $result["foto"] . '/' );
-                                echo $full_folder_name . '/images/' . $result["foto"] . '/' ;
+                                    $files = scandir( $full_folder_name . '/images/' . $json_key["foto"] . '/' );
+                                echo $full_folder_name . '/images/' . $json_key["foto"] . '/' ;
                                     foreach($files as $file) {
                                         if ( $file != '.' AND $file != '..' )
-                                            echo '<img src="' . $full_folder_name . '/images/' . $result["foto"] . '/' . $file . '">' ;
+                                            echo '<img src="' . $full_folder_name . '/images/' . $json_key["foto"] . '/' . $file . '">' ;
                                         }
                                 echo '</div>';
                             }
