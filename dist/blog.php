@@ -98,26 +98,80 @@
 
                 <?
                     // other articles
-                    foreach($json_data["articles"] as $result) {
-                        echo '<article class=article-second-body>';
-                        echo    '<article class=article-second-header>';
-                        echo            '<h1>' . $result["name"] . '</h1>'    ;
-                        echo            '<h2>';
-                                            foreach($result["country"] as $result2) {
-                                                echo $result2 . " ";
-                                            };
-                        echo            '</h2>';
-                                        if ( $result["dateend"] ){
-                                            $dateend = ' - ' . $result["dateend"] ;
-                                        }
-                                        else{
-                                            $dateend = '';
-                                        }
-                        echo            '<h3>' . $result["date"] . $dateend . '</h3>' ;
+                // other articles
+                foreach($json_data["articles"] as $result) {
+                    echo '<article class=article-second-body>';
+                    echo    '<article class=article-second-header>';
+                    echo            '<h1>' . $result["name"] . '</h1>'    ;
+                    echo            '<h2>';
+                                        foreach($result["country"] as $result2) {
+                                            echo $result2 . " ";
+                                        };
+                    echo            '</h2>';
+                                    if ( $result["dateend"] ){
+                                        $dateend = ' - ' . $result["dateend"] ;
+                                    }
+                                    else{
+                                        $dateend = '';
+                                    }
+                    echo            '<h3>' . $result["date"] . $dateend . '</h3>' ;
+                    
+                    if ( $result["link_booking"] ) {
+                        echo            '<h3>' . '<a href="' .  $result["link_booking"] . '">Booking link</a>' . '</h3>' ;
+                    }
+
+
+
+
+                    echo    '</article>'    ;
+
+                    if ( $result["map"] ){
+                        echo    '<div align=middle class=iframe-class-map>';
+                        echo        '<iframe src="' . $result["map"] . '" width=100% height=500px frameborder="0" style="border:0" allowfullscreen></iframe>';
+                        echo    '</div>';
+                    }
+
+                    if ( $result["description"] ){
+                        echo    '<h4>' . $result["description"] . '</h4>'    ;
+                    }
+                    
+                    if ( $result["descriptionarticle"] ){
+                        echo    '<h4>' ;
+                        include_once $foldername . '/' . $result["descriptionarticle"] . '.html' ; 
+                        echo '</h4>'    ;
+                    }
+
+                    echo    '<div class=photo-galery>' ;
+                    if ( $result["foto"] ){
+                        echo        '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820" data-navposition="top">';
                         
-                        if ( $result["link_booking"] ) {
-                            echo            '<h3>' . '<a href="' .  $result["link_booking"] . '">Booking link</a>' . '</h3>' ;
-                        }
+                                    $files = scandir( $foldername . '/images/' . $result["foto"] . '/' );
+                                    foreach($files as $file) {
+                                        if ( $file != '.' AND $file != '..' )
+                                            echo '<img src="' . $foldername . '/images/' . $result["foto"] . '/' . $file . '">' ;
+                                    }
+                        echo        '</div>';
+                    }
+
+                    if ( $result["video"] ){
+                        echo        '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820" data-navposition="top">';
+                                    foreach($result["video"] as $result2) {
+                                        echo    '<a href="' . $result2 . '"></a>';;
+                                    };
+                        echo        '</div>';
+                    }
+                    if ( $result["videoroad"] ){
+                        echo        '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820" data-navposition="top">';
+                                    foreach($result["videoroad"] as $result2) {
+                                        echo    '<a href="' . $result2 . '"></a>';;
+                                    };
+                        echo        '</div>';
+                    }               
+           
+                    echo    '</div class=photo-galery>' ;
+
+                    echo '</article>'    ;
+                };       
                     ?>
 
 
