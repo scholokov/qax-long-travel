@@ -151,14 +151,15 @@
                             
                             if ( $json_key["foto"] ){
                                 echo    '<div class=photo-galery>' ;
-                                echo    '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820" data-navposition="top">';
+                                    echo    '<div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-keyboard="true" data-height="100%" data-width="100%" data-max-height="820">';
                                 
                                     $files = scandir( $full_folder_name . '/images/' . $json_key["foto"] . '/' );
-                                echo $full_folder_name . '/images/' . $json_key["foto"] . '/' ;
+                                    echo $full_folder_name . '/images/' . $json_key["foto"] . '/' ;
                                     foreach($files as $file) {
                                         if ( $file != '.' AND $file != '..' )
-                                            echo '<img src="' . $full_folder_name . '/images/' . $json_key["foto"] . '/' . $file . '">' ;
+                                            echo '<a src="' . $full_folder_name . '/images/' . $json_key["foto"] . '/' . $file . '"></a>' ;
                                         }
+                                    echo '</div>';
                                 echo '</div>';
                             }
                             
