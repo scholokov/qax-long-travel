@@ -81,7 +81,9 @@
 
                     <div class="container">
                         <div id="top_text">
-                            <h3><?echo $json_data['name']?></h3>
+                            <h3>
+                                <?echo $json_data['name']?>
+                            </h3>
                             <div>
                                 <?foreach($json_data['country'] as $result) { echo $result . ' '; }?>
                             </div>
@@ -119,7 +121,8 @@
                                 echo '<div id="top_text">';
                                     echo '<h3>' . $json_data['name'] . '</h3>';
                                         echo '<div>';
-                                            foreach($json_data['country'] as $result) { echo $result . ' ';}
+                                            foreach($json_data['country'] as $result) { 
+                                                echo $result . ' ';}
                                         echo '</div>';
                                     echo '<div>';
                                         echo $json_data['date'] . $dateend;
@@ -137,15 +140,10 @@
                         
                             echo '<div class="container">';
                                 echo '<div id="bottom_text">';
-                                    echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ultricies ullamcorper felis,
-                            viverra in maecenas integer.
-                            Amet habitant lectus pharetra sem ac quisque nunc ut etiam. Nulla nibh consectetur eget et,
-                            laoreet mattis et.
-                            Pellentesque sit cras eget vitae cras ut. Purus quis netus vulputate amet lectus bibendum.
-                            Vel, congue aliquet ac amet mauris dignissim in. Orci lectus facilisis praesent diam odio
-                            libero eu.
-                            Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut
-                            ornare viverra lorem.';
+                                    echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ultricies ullamcorper felis, viverra in maecenas integer. Amet habitant lectus pharetra sem ac quisque nunc ut etiam. Nulla nibh consectetur eget et,
+                            laoreet mattis et. Pellentesque sit cras eget vitae cras ut. Purus quis netus vulputate amet lectus bibendum.
+                            Vel, congue aliquet ac amet mauris dignissim in. Orci lectus facilisis praesent diam odio libero eu.
+                            Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut ornare viverra lorem.';
                                 echo '</div>';
                             echo '</div>';
                             
