@@ -95,7 +95,7 @@
                     </div>
                     <div class="container-xxl">
                         <!--<img src="images/map.svg" alt="map">-->
-                        <iframe src="<?echo . $json_data['map']?>" max-width="1440px" width="100%"
+                        <iframe src="<?echo $json_data['map']?>" max-width="1440px" width="100%"
                             max-height="500px" height="500px" style="border:0;" allowfullscreen=""
                             loading="lazy"></iframe>
                     </div>
