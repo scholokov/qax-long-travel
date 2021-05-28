@@ -110,10 +110,6 @@
                             libero eu.
                             Lorem integer dolor amet enim adipiscing accumsan, odio. Augue aenean suscipit feugiat ut
                             ornare viverra lorem.
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d654803.3113192053!2d29.745718938446117!3d50.12698842278407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!3m2!1d50.4501!2d30.5234!4m5!1s0x40d343dbcc7fcabb%3A0x7d7e932a4db1aaa6!2z0JDQu9C10LrRgdCw0L3QtNGA0LjRjywg0J_QsNGA0LogwqvQntC70LXQutGB0LDQvdC00YDRltGPwrssINCR0ZbQu9CwINCm0LXRgNC60LLQsCwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LsuLCAwOTEwMA!3m2!1d49.811837499999996!2d30.0647918!4m5!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!3m2!1d50.4501!2d30.5234!5e0!3m2!1sru!2sua!4v1595339013408!5m2!1sru!2sua"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                            </iframe>
                         </div>
                     </div>
 
