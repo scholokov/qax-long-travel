@@ -157,8 +157,10 @@
                                         $files = scandir( $full_folder_name . '/images/' . $json_key["foto"] . '/' );
                                         echo $full_folder_name . '/images/' . $json_key["foto"] . '/' ;
                                         foreach($files as $file) {
-                                            if ( $file != '.' AND $file != '..' )
-                                                echo '<a src="' . $full_folder_name . '/images/' . $json_key["foto"] . '/' . $file . '"></a>' ;
+                                            if ( $file != '.' AND $file != '..' ){
+                                                $file_no_ext = substr($file, 0, -3);
+                                                echo '<a src="' . $full_folder_name . '/images/' . $json_key["foto"] . '/' . $file . '"><img src="' . $full_folder_name . '/images/' . $json_key["foto"] . '/' . $file_no_ext . '_thumb.jpg"></a>' ;
+                                            }
                                         }
                                         echo '</div>';
                                     echo '</div>';
